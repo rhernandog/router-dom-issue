@@ -49,7 +49,7 @@ function build(){
 			util.log(e.message);
 		})
 		.pipe(source("app.js"))
-		.pipe(gulp.dest("./build/js/"))
+		.pipe(gulp.dest("./js/"))
 		.pipe( bSync.stream({once:true}) );
 
 }
@@ -128,12 +128,12 @@ gulp.task("server", ["bundle"], function(){
 
 	bSync.init({
 		server:{
-			baseDir:["./build/", "../../"]
+			baseDir:["./", "../../"]
 		}
 	});
 
 	// watch
-	gulp.watch([ "./build/index.html", "./build/css/*.css", "./build/js/app.js" ], ["reload"]);
+	gulp.watch([ "./index.html", "./css/*.css", "./js/app.js" ], ["reload"]);
 
 });
 
