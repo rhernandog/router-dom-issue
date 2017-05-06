@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router, Route, NavLink, Link} from 'react-router-dom';
+import {/*BrowserRouter as Router*/HashRouter as Router, Route, NavLink, Link} from 'react-router-dom';
 
 
 // home
@@ -67,9 +67,15 @@ const Routes = ()=>(
 		<div className="container">
 			<div className="row">
 				<div className="col-sm-12">
-					<NavLink className="btn btn-primary" to="/">Home</NavLink>&nbsp;
-					<NavLink className="btn btn-primary" to="/services">Services</NavLink>&nbsp;
-					<NavLink className="btn btn-primary" to="/contact">Contact</NavLink>
+					<NavLink className="btn btn-primary"
+						to="/"
+					>Home</NavLink>&nbsp;
+					<NavLink className="btn btn-primary"
+						to="/services"
+					>Services</NavLink>&nbsp;
+					<NavLink className="btn btn-primary"
+						to="/contact"
+					>Contact</NavLink>
 					<hr/>
 				</div>
 

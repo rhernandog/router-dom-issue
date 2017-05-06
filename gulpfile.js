@@ -87,7 +87,7 @@ gulp.task("production", ['set-prod-node-env'], function(){
 		.on("error", function(e){
 			util.log(e.message);
 		})
-		.pipe( gulp.dest("./build/js/")	);
+		.pipe( gulp.dest("./js/")	);
 
 });
 
@@ -105,10 +105,10 @@ gulp.task("production", ['set-prod-node-env'], function(){
 // run the production-bundle task first
 gulp.task("min", ['production'], function(){
 	pump([
-		gulp.src("./build/js/app.js"),
+		gulp.src("./js/app.js"),
 		uglify(),
 		rename("app.min.js"),
-		gulp.dest('./build/js/')
+		gulp.dest('./js/')
 	]);
 });
 
